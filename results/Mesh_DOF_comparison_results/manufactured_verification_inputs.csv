@@ -1,0 +1,12 @@
+category,quantity,definition
+domain,Omega_b,"(0,1)^2"
+temperature,"T*(x,y)",20 + 10*x + 5*y
+displacement,"ux*(x,y)",0.0001*(x^2 + x*y)
+displacement,"uy*(x,y)",0.0001*(y^2 + x*y)
+thermal_source,q,0
+mechanical_boundary,Dirichlet,exact u* on entire boundary
+thermal_boundary,Dirichlet,exact T* on entire boundary
+body_force,f*,-div(sigma*); analytic constant vector
+element_quadrature,T3,3-point triangle rule for verification integrals/body load
+element_quadrature,Q4,2x2 Gauss rule
+plane_state,constitutive law,plane stress
